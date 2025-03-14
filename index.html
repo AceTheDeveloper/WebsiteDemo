@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Navbar with Sidebar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body style="overflow-x: hidden">
+    <div class="container-fluid p-0">
+      <!-- Top Navbar (Visible on Desktop) -->
+      <nav class="navbar navbar-expand-lg bg-success-custom p-0">
+        <div class="container-fluid">
+          <button class="navbar-toggler d-lg-none" type="button" id="toggleSidebar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+              <!-- About Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> About </a>
+                <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                  <li><a class="dropdown-item text-white" href="#">History</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Mission & Vision</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Core Values</a></li>
+                  <li><a class="dropdown-item text-white" href="#">School Seal</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Administrator</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Campus Tour</a></li>
+                </ul>
+              </li>
+
+              <!-- Admission Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="admissionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Admission </a>
+                <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+                  <li><a class="dropdown-item text-white" href="#">Undergraduate</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Graduate</a></li>
+                  <li><a class="dropdown-item text-white" href="#">International Students</a></li>
+                </ul>
+              </li>
+
+              <!-- Academics Dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="academicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Academics </a>
+                <ul class="dropdown-menu" aria-labelledby="academicsDropdown">
+                  <li><a class="dropdown-item text-white" href="#">Programs & Courses</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Faculty</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Research</a></li>
+                </ul>
+              </li>
+
+              <li><a href="" class="nav-link text-white">Campus life</a></li>
+
+              <li><a href="" class="nav-link text-white">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="sidebar bg-success-custom" id="sidebar" style="z-index: 100000">
+        <a href="#" id="closeSidebar">✖ Close</a>
+        <a href="#" class="text-white">About</a>
+        <a href="#" class="text-white">Home</a>
+        <a href="#" class="text-white">Leonides S. Virata</a>
+        <a href="#" class="text-white">St. John Baptist De La Salle</a>
+        <a href="#" class="text-white">Institutional Philosophy</a>
+        <a href="#" class="text-white">Graduate Attributes</a>
+        <a href="#" class="text-white">LSVMS Seal</a>
+        <a href="#" class="text-white">Admission</a>
+        <a href="#" class="text-white">Guide Lines on Admission</a>
+        <a href="#" class="text-white">Enrollment Procedures</a>
+        <a href="#" class="text-white">ENROLL NOW</a>
+        <a href="#" class="text-white">Academics</a>
+        <a href="#" class="text-white">Grading System</a>
+        <a href="#" class="text-white">Subject Offerings</a>
+        <a href="#" class="text-white">Academic Calendar</a>
+        <a href="#" class="text-white">Co-curricular & Clubs</a>
+        <a href="#" class="text-white">Campus life</a>
+        <a href="#" class="text-white">Contact Us</a>
+      </div>
+
+      <!-- Overlay for sidebar -->
+      <div class="overlay" id="overlay"></div>
+
+      <div id="first-page" style="z-index: 100">
+        <div class="d-flex align-items-center justify-content-between flex-column flex-md-row">
+          <img src="assets/slogo.png" alt="" />
+          <div class="flex-fill text-start">
+            <p class="title m-0 fs-1-custom fw-bold text-white">Leonides S. Vitara</p>
+            <p class="title m-0 fs-1-custom fw-bold text-white">Memorial School</p>
+            <p class="sub-text m-0 fs-4 fw-bold text-white">Excellence for a Brighter Future</p>
+            <div class="w-100 mt-2 desc-container">
+              <p class="lh-2 m-0 fs-6 fw-normal text-white">School (LSVMS) is a Catholic private school in</p>
+              <p class="lh-2 m-0 fs-6 fw-normal text-white">Rio Tuba, Palawan, offering K-12 education under RTN Foundation, Inc., with</p>
+              <p class="lh-2 m-0 fs-6 fw-normal text-white">Lasallian accreditation in MIMAROPA.</p>
+              <button class="button-yellow mt-2 p-2 text-white">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="second-page" class="">
+        <p class="text-center fs-4 fw-bold lh-sm m-0">Quick Links</p>
+        <div class="mx-0 mx-md-4 mt-2">
+          <div class="row fade-in-left">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/1.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/4.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/5.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row fade-in-right">
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/3.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/7.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+              <div class="card">
+                <div class="card-body bg-success-custom p-0">
+                  <img src="assets/Quick Links (Textbox)/8.png" alt="" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="third-page" class="fade-up">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="card flex-fill fade-in-bottom">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <div class="text-center">
+                <h1 class="text-white">Kinder-Elementary</h1>
+                <p class="text-white">Enroll now and start your journey to excellence in elementary education</p>
+                <button class="button-yellow p-1 text-white">Enroll Now</button>
+              </div>
+              <div class="bg-success-custom"></div>
+            </div>
+          </div>
+
+          <div class="card flex-fill fade-in-bottom">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <div class="text-center">
+                <h1 class="text-white">Junior High School</h1>
+                <p class="text-white">Building bright futures-enroll in our junior high school program now</p>
+                <button class="button-yellow p-1 text-white">Enroll Now</button>
+              </div>
+              <div class="bg-success-custom"></div>
+            </div>
+          </div>
+
+          <div class="card flex-fill fade-in-bottom">
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <div class="text-center">
+                <h1 class="text-white">Senior High School</h1>
+                <p class="text-white">Preparing you for college and beyond-join our Senior High School Program</p>
+                <button class="button-yellow p-1 text-white">Enroll Now</button>
+              </div>
+              <div class="bg-success-custom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="fourth-page" class="bg-success-custom">
+        <div class="px-5">
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <h1 class="lh-0 m-0 text-white fade-in-bottom">Learn, Lead, and Soar. LSVMS Opens Every Door</h1>
+                <hr class="border-white fade-in-bottom" />
+
+                <div>
+                  <p class="text-white m-0 mt-1 fade-in-bottom fade-paragraph">
+                    <span class="mb-2 fw-bold">Quality Education & Holistic Development<br /></span>
+                    Gain essential knowledge and skills through a well-rounded curriculum that prepares students for higher education and future careers.
+                  </p>
+
+                  <p class="text-white m-0 mt-1 fade-in-bottom fade-paragraph">
+                    <span class="mb-2 fw-bold">State-of-the-Art Facilities<br /></span>
+                    Learn in well-equipped classrooms, science laboratories, and computer labs designed to support hands-on learning and academic excellence.
+                  </p>
+
+                  <p class="text-white m-0 mt-1 fade-in-bottom fade-paragraph">
+                    <span class="mb-2 fw-bold">Innovative Learning Environment<br /></span>
+                    Access modern teaching methods, digital resources, and interactive classroom activities that enhance student engagement and learning.
+                  </p>
+
+                  <p class="text-white m-0 mt-1 fade-in-bottom fade-paragraph">
+                    <span class="mb-2 fw-bold">Supportive & Dynamic Community<br /></span>
+                    Be part of a school that values academic achievement, leadership, and community involvement, fostering both personal and intellectual growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 text-center">
+              <div class="position-relative con">
+                <img src="assets/Pics-20250313T210547Z-001/Pics/4th.jpg" alt="" />
+
+                <div class="text-start position-absolute top-50 start-0 p-1">
+                  <p class="up text-white fs-5">
+                    <span class="text-warning h1 fw-bold">Be an LSVMesian!<br /></span> 1,270 students are enrolled at LSVMS. Be part of our growing, inclusive community today
+                  </p>
+                </div>
+
+                <div class="bg-success-custom green">?</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="fifth-page" class="p-5 bg-success-custom mt-2">
+        <div>
+          <div class="row d-flex flex-column flex-md-row fade-in">
+            <div class="col-md-6">
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.647696328018!2d117.4357156!3d8.5335418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32346c66dae9a509%3A0x45e6ebf747803da1!2sLeonides%20S.%20Virata%20Memorial%20School!5e0!3m2!1sen!2sph!4v1741903368633!5m2!1sen!2sph" width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=""></iframe>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="ms-3">
+                <p class="text-white">
+                  <span class="text-warning fs-1 fw-bold mb-5">We are located here! <br /></span> Leonides S. Virata Memorial School (LSVMS) is a private Catholic educational institution located in Rio Tuba, Barangay Rio Tuba, Municipality of Bataraza, Palawan, Philippines. Situated at F.P. Mamaclay Avenue, RTN Townsite, the school serves the dependents of employees from Rio Tuba Nickel Mining Corporation (RTNMC), Coral Bay Nickel Corporation (CBNC), and RTN Foundation, Inc., as well as students from neighboring communities.
+                </p>
+
+                <button class="button-yellow p-2 text-white">See Us Here</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sixth-page">
+        <div class="p-5">
+          <header class="mb-4">
+            <h1 class="text-white lh-0 m-0">LSVMS Alumni</h1>
+            <span class="fs-6 text-white lh-0 m-0">excel globally, making an impact in various industries worldwide</span>
+          </header>
+          <div class="row">
+            <div class="col-md-3 p-0 mb-md-0 mb-2 border-0 card text-center fade-in-left">
+              <div class="card-header p-0 border-0">
+                <p class="text-white">Batch 1999</p>
+              </div>
+
+              <div class="card-body text-white">
+                <div>
+                  <img src="assets/Alumni/1.jpg" alt="" class="" />
+                  <p>Michael Riel</p>
+                  <p>MATERIAL SPECIALIST/ METAL AND MINERAL PROCESSING</p>
+                  <p>Working in Madagascar, Africa, he applies the strong time management, critical thinking, and interpersonal skills he developed during his time at LSVMS, enabling him to balance responsibilities, analyze complex situations and collaborate effectively in his career.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 p-0 mb-md-0 mb-2 border-0 card text-center fade-in-left">
+              <div class="card-header p-0 border-0">
+                <p class="text-white">Batch 2012</p>
+              </div>
+
+              <div class="card-body text-white">
+                <div>
+                  <img src="assets/Alumni/2.jpg" alt="" class="" />
+                  <p>Jo Banastao</p>
+                  <p>PETROLEUM ENGINEER</p>
+                  <p>A 2012 LSVMS graduate and Petroleum Engineer in Dubai, proves that grit and a desire to explore open doors to success. She encourages students to dream big, push boundaries, and never settle because growth comes from embracing challenges and seeking greater opportunities.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 p-0 mb-md-0 mb-2 border-0 card text-center fade-in-right">
+              <div class="card-header p-0 border-0">
+                <p class="text-white">Batch 2005</p>
+              </div>
+
+              <div class="card-body text-white">
+                <div>
+                  <img src="assets/Alumni/3.jpg" alt="" class="" />
+                  <p>Melanie Moreno-Yu</p>
+                  <p>OPERATING ROOM NURSE</p>
+                  <p>An LSVMS graduate and now an Operating Room Nurse in Canada, she credits her alma mater for shaping her global career and inspiring students to persevere, learn, and chase their dreams with faith.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-3 p-0 mb-md-0 mb-2 border-0 card text-center fade-in-right">
+              <div class="card-header p-0 border-0">
+                <p class="text-white">Batch 1999</p>
+              </div>
+
+              <div class="card-body text-white">
+                <div>
+                  <img src="assets/Alumni/4.jpg" alt="" class="" />
+                  <p>Maranatha C. Miano-Rodriguez</p>
+                  <p>OPERATIONG ROOM HEAD NURSE</p>
+                  <p>a 1999 LSVMS graduate and OR Head Nurse in Saudi Arabia, credits LSVM for instilling faith, confidence, and dedication, urging students to pursue their dreams with courage and trust in God</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sidebar = document.getElementById("sidebar");
+        const overlay = document.getElementById("overlay");
+        const toggleButton = document.getElementById("toggleSidebar");
+        const closeButton = document.getElementById("closeSidebar");
+
+        toggleButton.addEventListener("click", function () {
+          sidebar.classList.add("show");
+          overlay.classList.add("show");
+        });
+
+        closeButton.addEventListener("click", function () {
+          sidebar.classList.remove("show");
+          overlay.classList.remove("show");
+        });
+
+        overlay.addEventListener("click", function () {
+          sidebar.classList.remove("show");
+          overlay.classList.remove("show");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in-left, .fade-in-right");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show"); // Add the class when in view
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        fadeInElements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+
+      const fadeInElements = document.querySelectorAll(".fade-in-bottom");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("show"); // Add class with delay
+              }, index * 300); // Delay each card by 300ms (adjust as needed)
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+
+      fadeInElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+
+        fadeInElements.forEach((el) => observer.observe(el));
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".fade-in-left, .fade-in-right");
+
+        function revealOnScroll() {
+          const triggerBottom = window.innerHeight * 0.85;
+
+          cards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+              if (index >= 2) {
+                card.classList.add("delay"); // Apply delay to last two cards
+              }
+              card.classList.add("show");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
